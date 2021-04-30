@@ -15,7 +15,7 @@ import test.jes.web.CustomSpringConfigurator;
 
 
 @Component
-@ServerEndpoint(value="/WebSocket2", configurator=CustomSpringConfigurator.class)
+@ServerEndpoint(value="/WebSocket2")
 public class WebSocket2 {
 	
 	ArrayList<Session> list;
