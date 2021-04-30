@@ -18,7 +18,7 @@ public class UploadController {
 		
 		try {
 			
-			file.transferTo(new File("~/0jes/upload/"+file.getOriginalFilename()));
+			file.transferTo(new File("./upload/"+file.getOriginalFilename()));
 		
 			return "upload ok!!!";
 		} catch (IllegalStateException e) {
