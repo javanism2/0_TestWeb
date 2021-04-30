@@ -18,7 +18,21 @@ public class UploadController {
 		
 		try {
 			
-			file.transferTo(new File("./upload/"+file.getOriginalFilename()));
+			 File dir = new File("/upload");
+			 if(!dir.exists()) {
+			      //Creating the directory
+			      boolean bool = dir.mkdir();
+			      if(bool){
+			         System.out.println("Directory created successfully");
+			         
+			      }else{
+			         System.out.println("Sorry couldn’t create specified directory");
+			      }
+			 }
+			 
+			 file.transferTo(new File("/upload/"+file.getOriginalFilename()));
+			
+			
 		
 			return "upload ok!!!";
 		} catch (IllegalStateException e) {
