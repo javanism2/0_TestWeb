@@ -104,14 +104,14 @@ $(document).ready(function() {
 	
 	
     $("#speakBtn").click(function() {
-    	$('#speakBtn').attr('src','img/sound.gif');
+    	$('#speakBtn').attr('src','../img/sound.gif');
     	setTimeout(stop_voice,5000);
     	startSpeechRecognition();
 
     });
     
     function stop_voice(){
-    	$('#speakBtn').attr('src','img/sound_stop.png');
+    	$('#speakBtn').attr('src','../img/sound_stop.png');
     }
 	
 
@@ -142,17 +142,17 @@ $(document).ready(function() {
 
 <!-- 음성인식 책 추천 -->
 
-	<img src="img/ai.jpg">
+	<img src="../img/ai.jpg">
 	<h1>AI 음성인식 책 추천 </h1>
 	<br>
 	* 다음과 같이 질문하실 수 있어요.<br><br>
 		
-		<img src="img/sample2.png" width="100">
-		<img src="img/sample3.png" width="100"><br>
+		<img src="../img/sample2.png" width="100">
+		<img src="../img/sample3.png" width="100"><br>
 		
 
 		
-		<img src="img/sound_stop.png" id="speakBtn"  width="100">
+		<img src="../img/sound_stop.png" id="speakBtn"  width="100">
 		(&lt;==아이콘을 누르고 1초 뒤, 5초 이내로 말하세요)<br>
 		<br><br>
 		질문 : <input  id="speech_result"></input><br>
