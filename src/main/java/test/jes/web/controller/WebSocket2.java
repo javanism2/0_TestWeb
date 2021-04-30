@@ -11,9 +11,11 @@ import javax.websocket.server.ServerEndpoint;
 
 import org.springframework.stereotype.Component;
 
+import test.jes.web.CustomSpringConfigurator;
+
 
 @Component
-@ServerEndpoint("/WebSocket2")
+@ServerEndpoint(value="/WebSocket2", configurator=CustomSpringConfigurator.class)
 public class WebSocket2 {
 	
 	ArrayList<Session> list;
